@@ -4,30 +4,36 @@ import Navbar from "./components/layout/Navbar";
 import CategoryBar from "./components/layout/CategoryBar";
 import Footer from "./components/layout/Footer";
 import TrustBar from "./components/sections/TrustBar";
+import HeroCarousel from "./components/sections/HeroCarousel";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [showAnnouncement, setShowAnnouncement] = useState(true);
 
   return (
-    <div className="w-full min-w-0 overflow-x-hidden">
-      {/* Announcement Bar */}
-      <div
-        className={`grid transition-[grid-template-rows] duration-500 ease-in-out ${
-          showAnnouncement ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-        }`}
-      >
-        <div className="min-h-0 overflow-hidden">
-          <AnnouncementBar onClose={() => setShowAnnouncement(false)} />
+    <>
+      <Toaster position="top-center" />
+      <div className="w-full min-w-0 overflow-x-hidden">
+        {/* Announcement Bar */}
+        <div
+          className={`grid transition-[grid-template-rows] duration-500 ease-in-out ${
+            showAnnouncement ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+          }`}
+        >
+          <div className="min-h-0 overflow-hidden">
+            <AnnouncementBar onClose={() => setShowAnnouncement(false)} />
+          </div>
         </div>
+
+        <Navbar />
+
+        <CategoryBar />
+        <HeroCarousel />
+
+        <TrustBar />
+        <Footer />
       </div>
-
-      <Navbar />
-
-      <CategoryBar />
-
-      <TrustBar />
-      <Footer />
-    </div>
+    </>
   );
 }
 

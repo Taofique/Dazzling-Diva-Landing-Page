@@ -1,4 +1,3 @@
-// src/components/layout/CategoryBar.tsx
 import downArrowIcon from "../../assets/icons/category/down-arrow-icon.svg";
 import newStarIcon from "../../assets/icons/category/new-star-icon.svg";
 import percentageOfferIcon from "../../assets/icons/category/percentage-offer-icon.svg";
@@ -78,7 +77,7 @@ const CategoryBar = () => {
           <div
             ref={scrollRef}
             {...handlers}
-            className="scrollbar-hide flex h-11 items-center gap-2 overflow-x-auto scroll-smooth select-none sm:h-12 sm:gap-2.5 lg:h-13"
+            className="scrollbar-hide flex h-11 items-center gap-2 overflow-x-auto overflow-y-hidden scroll-smooth py-0.5 select-none sm:h-12 sm:gap-2.5 lg:h-13"
           >
             {categoryLinks.map((link) => (
               <a
