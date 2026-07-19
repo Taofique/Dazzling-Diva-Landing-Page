@@ -36,14 +36,14 @@ const Navbar = () => {
       <div className="flex items-center gap-3 sm:gap-4">
         <a
           href="/store"
-          className="font-outfit hidden items-center gap-1.5 text-sm whitespace-nowrap text-gray-800 transition-opacity hover:opacity-70 lg:flex"
+          className="font-outfit hidden items-center gap-1.5 text-base whitespace-nowrap text-gray-800 transition-opacity hover:opacity-70 lg:flex"
         >
           <img src={storeIcon} alt="" className="h-4 w-4" />
           Store
         </a>
         <a
           href="/track-order"
-          className="font-outfit hidden items-center gap-1.5 text-sm whitespace-nowrap text-gray-800 transition-opacity hover:opacity-70 lg:flex"
+          className="font-outfit hidden items-center gap-1.5 text-base whitespace-nowrap text-gray-800 transition-opacity hover:opacity-70 lg:flex"
         >
           <img src={trackIcon} alt="" className="h-4 w-4" />
           Track Order

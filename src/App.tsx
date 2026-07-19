@@ -3,6 +3,7 @@ import AnnouncementBar from "./components/layout/AnnouncementBar";
 import Navbar from "./components/layout/Navbar";
 import CategoryBar from "./components/layout/CategoryBar";
 import Footer from "./components/layout/Footer";
+import TrustBar from "./components/sections/TrustBar";
 
 function App() {
   const [showAnnouncement, setShowAnnouncement] = useState(true);
@@ -24,6 +25,7 @@ function App() {
 
       <CategoryBar />
 
+      <TrustBar />
       <Footer />
     </div>
   );

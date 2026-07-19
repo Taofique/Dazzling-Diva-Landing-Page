@@ -20,11 +20,11 @@ const CategoryBar = () => {
           >
             <span className="whitespace-nowrap">Select Category</span>
 
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white sm:h-9 sm:w-9">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white transition-all duration-200 hover:scale-105 hover:bg-gray-100 sm:h-9 sm:w-9">
               <img
                 src={downArrowIcon}
                 alt=""
-                className="h-3.5 w-3.5 sm:h-4 sm:w-4"
+                className="h-5 w-5 sm:h-8 sm:w-8"
               />
             </span>
           </button>
@@ -67,13 +67,9 @@ const CategoryBar = () => {
           <button
             type="button"
             aria-label="Search"
-            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#5A0C3D] transition-opacity hover:opacity-80 sm:h-9 sm:w-9"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#5A0C3D] transition-all duration-200 hover:scale-105 hover:opacity-90"
           >
-            <img
-              src={searchIcon}
-              alt=""
-              className="h-3.5 w-3.5 invert sm:h-4 sm:w-4"
-            />
+            <img src={searchIcon} alt="" className="h-5 w-5 sm:h-6 sm:w-6" />
           </button>
         </div>
 
