@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@theme {
+  --font-outfit: "Outfit", sans-serif;
+  --color-promo-bar: #5a0c3d;
+}
