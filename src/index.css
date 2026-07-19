@@ -4,4 +4,16 @@
   --font-outfit: "Outfit", sans-serif;
   --color-promo-bar: #5a0c3d;
   --color-navbar: #f8f8f8;
+  --color-footer: #520a38;
+  --color-footer-bottom: #7c0454;
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
