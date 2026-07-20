@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BrowserRouter } from "react-router-dom"; // ← Add this import
 import AnnouncementBar from "./components/layout/AnnouncementBar";
 import Navbar from "./components/layout/Navbar";
 import CategoryBar from "./components/layout/CategoryBar";
@@ -8,12 +9,15 @@ import HeroCarousel from "./components/sections/HeroCarousel";
 import { Toaster } from "react-hot-toast";
 import ShopByCategory from "./components/sections/ShopByCategory";
 import FlashDeals from "./components/sections/FlashDeals";
+import ProductPreview from "./components/sections/ProductPreview";
 
 function App() {
   const [showAnnouncement, setShowAnnouncement] = useState(true);
 
   return (
-    <>
+    <BrowserRouter>
+      {" "}
+      {/* ← Wrap everything with BrowserRouter */}
       <Toaster position="top-center" />
       <div className="w-full min-w-0">
         {/* Announcement Bar */}
@@ -28,16 +32,15 @@ function App() {
         </div>
 
         <Navbar />
-
         <CategoryBar />
         <HeroCarousel />
         <ShopByCategory />
         <FlashDeals />
-
+        <ProductPreview />
         <TrustBar />
         <Footer />
       </div>
-    </>
+    </BrowserRouter>
   );
 }
 
