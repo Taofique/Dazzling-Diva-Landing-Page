@@ -6,10 +6,10 @@ const ShopByCategory = () => {
     <section className="flex flex-col items-center gap-8 px-4 py-12 sm:px-8 sm:py-16 lg:px-16">
       {/* Header */}
       <div className="flex w-full max-w-[610px] flex-col items-center gap-2 text-center">
-        <p className="font-['Outfit',sans-serif] text-lg text-black capitalize">
+        <p className="font-outfit text-lg font-normal text-black capitalize">
           Shop By Category
         </p>
-        <h2 className="font-['Outfit',sans-serif] text-3xl font-semibold text-black uppercase sm:text-4xl lg:text-5xl">
+        <h2 className="font-outfit text-3xl font-normal text-black uppercase sm:text-4xl lg:text-5xl">
           Find Your Perfect Style
         </h2>
       </div>
@@ -36,10 +36,10 @@ const ShopByCategory = () => {
             />
 
             <div className="relative flex flex-col items-start gap-2.5">
-              <p className="font-['Outfit',sans-serif] text-2xl font-semibold text-white capitalize">
+              <p className="font-outfit text-2xl font-semibold text-white capitalize">
                 {category.title}
               </p>
-              <span className="flex items-center gap-2.5 font-['Outfit',sans-serif] text-sm text-white capitalize">
+              <span className="font-outfit flex items-center gap-2.5 text-sm text-white capitalize">
                 {category.ctaLabel}
                 <img src={ArrowSign} alt="" className="h-3.5 w-3.5" />
               </span>
