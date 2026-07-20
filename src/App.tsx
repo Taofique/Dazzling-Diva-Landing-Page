@@ -10,6 +10,7 @@ import { Toaster } from "react-hot-toast";
 import ShopByCategory from "./components/sections/ShopByCategory";
 import FlashDeals from "./components/sections/FlashDeals";
 import ProductPreview from "./components/sections/ProductPreview";
+import TwoColumn from "./components/sections/TwoColumn";
 
 function App() {
   const [showAnnouncement, setShowAnnouncement] = useState(true);
@@ -37,6 +38,7 @@ function App() {
         <ShopByCategory />
         <FlashDeals />
         <ProductPreview />
+        <TwoColumn />
         <TrustBar />
         <Footer />
       </div>
