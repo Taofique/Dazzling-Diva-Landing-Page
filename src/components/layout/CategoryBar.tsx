@@ -9,7 +9,7 @@ const CategoryBar = () => {
   const { ref: scrollRef, handlers } = useDragScroll<HTMLDivElement>();
 
   return (
-    <div className="w-full min-w-0 border-b border-gray-100 bg-white py-3 sm:py-4">
+    <div className="sticky top-0 z-50 w-full min-w-0 border-b border-gray-100 bg-white py-3 sm:py-4">
       <div className="font-outfit flex flex-col gap-3 px-4 sm:gap-4 sm:px-8 md:px-16 lg:h-13 lg:flex-row lg:items-center lg:gap-6 lg:px-32">
         {/* ROW 1 (mobile/tablet), LEFT group (desktop): Select Category / New In / Offers */}
         <div className="scrollbar-hide flex h-11 shrink-0 items-center gap-2 overflow-x-auto sm:h-12 lg:h-13 lg:gap-3 lg:overflow-visible">

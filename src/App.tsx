@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Toaster position="top-center" />
-      <div className="w-full min-w-0 overflow-x-hidden">
+      <div className="w-full min-w-0">
         {/* Announcement Bar */}
         <div
           className={`grid transition-[grid-template-rows] duration-500 ease-in-out ${
