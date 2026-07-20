@@ -6,6 +6,7 @@ import Footer from "./components/layout/Footer";
 import TrustBar from "./components/sections/TrustBar";
 import HeroCarousel from "./components/sections/HeroCarousel";
 import { Toaster } from "react-hot-toast";
+import ShopByCategory from "./components/sections/ShopByCategory";
 
 function App() {
   const [showAnnouncement, setShowAnnouncement] = useState(true);
@@ -29,6 +30,7 @@ function App() {
 
         <CategoryBar />
         <HeroCarousel />
+        <ShopByCategory />
 
         <TrustBar />
         <Footer />
