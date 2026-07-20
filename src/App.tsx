@@ -11,6 +11,7 @@ import ShopByCategory from "./components/sections/ShopByCategory";
 import FlashDeals from "./components/sections/FlashDeals";
 import ProductPreview from "./components/sections/ProductPreview";
 import TwoColumn from "./components/sections/TwoColumn";
+import NewArrival from "./components/sections/NewArrival";
 
 function App() {
   const [showAnnouncement, setShowAnnouncement] = useState(true);
@@ -39,6 +40,7 @@ function App() {
         <FlashDeals />
         <ProductPreview />
         <TwoColumn />
+        <NewArrival />
         <TrustBar />
         <Footer />
       </div>
