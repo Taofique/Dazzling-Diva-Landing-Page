@@ -7,6 +7,10 @@ export interface ColumnCallout {
   heading: string;
   image: string;
   href: string;
+  /** Vertical position: 0 = top, 100 = bottom. Default is 15 to show heads */
+  imagePositionY?: number;
+  /** Horizontal position: 0 = left, 100 = right. Default is 50 (center) */
+  imagePositionX?: number;
 }
 
 export const columnCallouts: ColumnCallout[] = [
