@@ -4,11 +4,8 @@ import type { ColumnCallout as ColumnCalloutType } from "../../data/twoColumn";
 interface ColumnCalloutProps {
   column: ColumnCalloutType;
   size?: "large" | "small";
-  /** Override the built-in height for this size (e.g. a taller box crops less vertically) */
   heightClassName?: string;
-  /** Vertical focal point of the crop, 0 = top, 100 = bottom. Defaults to top-anchored. */
   imagePositionY?: number;
-  /** Horizontal focal point of the crop, 0 = left, 100 = right. Defaults to center. */
   imagePositionX?: number;
 }
 
@@ -22,9 +19,8 @@ const ColumnCallout = ({
   const isSmall = size === "small";
   const defaultHeightClassName = isSmall
     ? "h-full"
-    : "h-[500px] sm:h-[560px] md:h-[620px] lg:h-[780px]"; // Increased height
+    : "h-[400px] sm:h-[500px] md:h-[560px] lg:h-[620px] xl:h-[780px]";
 
-  // Use prop value, or fall back to column's value, or default
   const positionY =
     imagePositionY !== undefined
       ? imagePositionY
@@ -41,22 +37,18 @@ const ColumnCallout = ({
 
   return (
     <div
-      className={`relative flex flex-1 items-end overflow-hidden ${
+      className={`relative flex w-full flex-1 items-end overflow-hidden ${
         heightClassName ?? defaultHeightClassName
       } ${isSmall ? "p-3 sm:p-4 md:p-6" : "p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12"}`}
+      style={{
+        backgroundImage: `url(${column.image})`,
+        backgroundSize: "cover",
+        backgroundPosition: `${positionX}% ${positionY}%`,
+        backgroundRepeat: "no-repeat",
+      }}
     >
-      {/* Background image */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        <img
-          src={column.image}
-          alt=""
-          className="absolute size-full max-w-none object-cover"
-          style={{
-            objectPosition: `${positionX}% ${positionY}%`,
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/0 from-40% to-black sm:from-50%" />
-      </div>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/0 from-40% to-black sm:from-50%" />
 
       {/* Content */}
       <div
