@@ -50,4 +50,13 @@ export const products: Product[] = [
     discountPercentage: 50,
     href: "/product/woven-design-organza-saree",
   },
+  {
+    id: "premium-woven-organza-saree",
+    title: "Premium Woven Design Organza Saree",
+    image: WineMaroonImage,
+    price: 22125.0,
+    originalPrice: 29500.0,
+    discountPercentage: 25,
+    href: "/product/premium-woven-organza-saree",
+  },
 ];
