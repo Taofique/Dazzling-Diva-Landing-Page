@@ -14,6 +14,7 @@ import TwoColumn from "./components/sections/TwoColumn";
 import NewArrival from "./components/sections/NewArrival";
 import DetailedCallout from "./components/sections/DetailedCallout";
 import FeaturedCollection from "./components/sections/FeaturedCollection";
+import CalloutBanner from "./components/sections/CalloutBanner";
 
 function App() {
   const [showAnnouncement, setShowAnnouncement] = useState(true);
@@ -45,6 +46,7 @@ function App() {
         <NewArrival />
         <DetailedCallout />
         <FeaturedCollection />
+        <CalloutBanner />
         <TrustBar />
         <Footer />
       </div>
